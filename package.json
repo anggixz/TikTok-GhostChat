@@ -1,0 +1,37 @@
+{
+  "name": "tiktok-live-ghost-chat",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n \"sidecar,vite\" -c \"cyan,magenta\" \"npm run sidecar\" \"vite\"",
+    "vite": "vite",
+    "sidecar": "node sidecar/server.js",
+    "sidecar:engine": "node sidecar/engine.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@tauri-apps/cli": "^2.12.1",
+    "@tsconfig/svelte": "^5.0.8",
+    "@types/node": "^24.13.3",
+    "concurrently": "^10.0.5",
+    "svelte": "^5.57.0",
+    "svelte-check": "^4.7.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "@lucide/svelte": "^1.52.0",
+    "@tanstack/svelte-virtual": "^3.13.39",
+    "@tauri-apps/api": "^2.12.1",
+    "@tauri-apps/plugin-shell": "^2.4.0",
+    "tiktok-live-connector": "^2.5.0",
+    "ws": "^8.22.0"
+  }
+}
